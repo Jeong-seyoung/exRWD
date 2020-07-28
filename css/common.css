@@ -206,10 +206,16 @@ legend,
 .container{
   display:flex;
   flex-flow:row wrap;
+  
 }
-
 .appHeader{
- background-color: silver;
+  display: grid;
+  background-color: silver;
+}
+.memberOnly{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
 }
 .appNavigation{
   background-color: purple;

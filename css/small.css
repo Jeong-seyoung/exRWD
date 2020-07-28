@@ -8,12 +8,45 @@ body{
   width:100%;
 }
 /* 모바일 헤더 */
-
-.brand{
+.appHeader{
+  grid-template: auto/1fr;
+  align-items: center;
+  background-color: #38302e;
 }
+.brand,.memberOnly,.searchForm{
+  padding:10px 20px;
+}
+/* 모바일 브랜드 */
+.brand *{ /* .brand a,.brand img*/
+  display: block;
+}
+/* 모바일 링크 모음 */
 .memberOnly{
+  order:-1;
+  background-color: #988574;
+  color:#fff;
+  padding:10px 20px;
+  /* display: flex;
+  flex-flow: row nowrap; 공용코드로 옮김 */ 
 }
+/* 모바일 검색 폼 */
+input[type="search"]{
+  border:1px solid #aaa;
+  width:calc(100% - 45px);/* 인라인 태그 사이에 enter가 공백영역으로 작용되어
+  정교하게 하기위해선 fieldset에 font-size:0, input bottom에 각각 font-size를 주면됨 */
+  padding:2px 5px;
+  margin-right:5px;
+  border-radius: 5px;
+  height:35px;
 
+}
+.buttonSearch{
+  width:35px;
+  height:35px;
+  border:0;
+  padding:0;
+  
+}
 /* 모바일 내비게이션 */
 .appNavigation{
   position: fixed;
