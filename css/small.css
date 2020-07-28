@@ -1,0 +1,33 @@
+/* 모바일 기본 글자 크기 */
+body{
+  font-size:1.5rem;
+  background-color: pink;
+}
+/* 모바일 공용레이아웃 */
+.appHeader,.appMain{
+  width:100%;
+}
+/* 모바일 헤더 */
+
+.brand{
+}
+.memberOnly{
+}
+
+/* 모바일 내비게이션 */
+.appNavigation{
+  position: fixed;
+  left:0;
+  top:0;
+  width:70vw;/* 뷰포트 가로너비 70% */
+  height:100vh;
+  transform: translateX(-100%);/* 원래상태로 돌리려면 값을 0 */
+
+}
+/* 모바일 메인 콘텐츠 */
+.appMain{
+}
+/* 모바일 푸터 */
+.appFooter{
+
+}

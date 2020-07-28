@@ -1,0 +1,25 @@
+/* 데스크탑 기본 글자 크기 */
+body{
+  font-size:1.4rem;
+  background-color: yellow;
+}
+.container{
+  justify-content: center;
+}
+
+/* 공용 레이아웃 */
+.appHeader,.appMain{
+  width:1000px;
+}
+/* 데스크탑 헤더 */
+
+/* 데스크탑 내비게이션 */
+.appNavigation{
+  width:100%;
+}
+/* 데스크탑 메인 콘텐츠 */
+.appMain{
+}
+/* 데스크탑 푸터 */
+.appFooter{
+}
