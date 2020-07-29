@@ -55,17 +55,71 @@ input[type="search"]{
   background-size: cover;
 }
 /* 모바일 내비게이션 */
-.appNavigation{
+/* 모바일 메뉴 제어 버튼 */
+.buttonBurger{
+  width:35px;
+  height:35px;
+  font-size: 0;
+  text-align: center;
+  position: absolute;
+  top:60px;
+  right:20px;
+  overflow: hidden;
+}
+.burgerBar{
+  position: absolute;
+  left:0;
+  cursor: pointer;
+  width:100%;
+  height:20%;
+  background-color:#fff;
+  transition: all 200ms ease-in-out;
+}
+.round{
+ border-radius: 20px;
+}
+.positionTop{
+  top:0px
+}
+.positionMiddle{
+  top:50%;
+  transform:translateY(-50%);
+}
+.positionBottom{
+  top:100%;
+  transform: translateY(-100%);/* bottom:0으로 배치하지 않는 이유는 애니메이션을 줘서 x 모양으로 만들건데 시작점이 bottom인 상태에서 궤적을 조절하기 어렵기 때문에 */
+}
+.isAct .positionTop{
+  transform:translateY(-50%) rotate(45deg);
+  top:50%;
+}
+
+.isAct .positionMiddle{
+  transform:translateY(-50%) translateX(-100%);
+  
+}
+.isAct .positionBottom{
+  top:50%;
+  transform:translateY(-50%) rotate(-45deg);
+}
+.menu__list{
   position: fixed;
   left:0;
   top:0;
   width:70vw;/* 뷰포트 가로너비 70% */
   height:100vh;
-  transform: translateX(-100%);/* 원래상태로 돌리려면 값을 0 */
+  transform: translateX(-105%);/* 원래상태로 돌리려면 값을 0 */
 
 }
 /* 모바일 메인 콘텐츠 */
 .appMain{
+  display: flex;
+  flex-flow:row wrap;
+  padding:0 20px;
+}
+.book,.news,.board,.favorite,.twitter{
+  width:100%;
+  height:10vh;
 }
 /* 모바일 푸터 */
 .appFooter{
