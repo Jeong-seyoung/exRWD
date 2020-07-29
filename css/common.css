@@ -210,12 +210,22 @@ legend,
 }
 .appHeader{
   display: grid;
-  background-color: silver;
+}
+/* 공통 멤버 링크 */
+.memberOnly .divider{
+  margin:0 5px;
 }
 .memberOnly{
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
+}
+input[type="search"]{
+  /* grid-column: 1/2; */
+  height:35px;
+  padding:1px 5px;
+  border-radius: 5px;
+  border:1px solid #aaa;
 }
 .appNavigation{
   background-color: purple;

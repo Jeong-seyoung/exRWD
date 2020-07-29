@@ -1,7 +1,6 @@
 /* 모바일 기본 글자 크기 */
 body{
   font-size:1.5rem;
-  background-color: pink;
 }
 /* 모바일 공용레이아웃 */
 .appHeader,.appMain{
@@ -31,13 +30,9 @@ body{
 }
 /* 모바일 검색 폼 */
 input[type="search"]{
-  border:1px solid #aaa;
   width:calc(100% - 45px);/* 인라인 태그 사이에 enter가 공백영역으로 작용되어
   정교하게 하기위해선 fieldset에 font-size:0, input bottom에 각각 font-size를 주면됨 */
-  padding:2px 5px;
   margin-right:5px;
-  border-radius: 5px;
-  height:35px;
 
 }
 .buttonSearch{
@@ -45,7 +40,19 @@ input[type="search"]{
   height:35px;
   border:0;
   padding:0;
+  position: relative;
+  background-color:transparent;/* button agent style reset */
   
+}
+.buttonSearch::after{
+  content: "";
+  width:100%;
+  height:100%;
+  position: absolute;
+  top:0;
+  left:0;
+  background:transparent url(./images/btn_search.png) 0 0 no-repeat scroll;
+  background-size: cover;
 }
 /* 모바일 내비게이션 */
 .appNavigation{
