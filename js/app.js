@@ -180,7 +180,7 @@ function demoWebCafeUI() {
       // 설정
       item.classList.add('icon-star');
       link.addEventListener('click', handlePreventBrowserAction);
-      link.setAttribute('role', 'presentation');
+      link.setAttribute('role', 'none');
       link.removeAttribute('aria-haspopup');
       link.removeAttribute('aria-pressed');
       link.removeAttribute('aria-expanded');
@@ -188,7 +188,7 @@ function demoWebCafeUI() {
   };
 
   // 창 너비를 감지하여 아이콘 모드 변경을 처리하는 함수
-  var handleWindowResize = function(e) {
+  var handleWindowResize = function(e) {//이벤트를 감지
     switch (getDeviceMode()) {
       case 'mobile':
         settingMobile();
