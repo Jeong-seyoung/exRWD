@@ -68,6 +68,8 @@
 *,*::before,*::after{
   box-sizing: border-box;
 }
+
+
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -268,6 +270,13 @@ legend,
   background: transparent;
 }
 
+/* 공통 반응형 콘텐츠 */
+.responsive{
+  max-width:100%;
+  height:auto;
+  /* 브라우저 해석의 차이로 일어나는 문제를 방지하기 위해 
+  height:auto를 명시적으로 작성 */
+}
 /* 모바일,데스크탑 공통 css */
 .container{
   display:flex;
@@ -293,10 +302,128 @@ input[type="search"]{
   border-radius: 5px;
   border:1px solid #aaa;
 }
+/* 공통메인 콘텐츠 ,단락*/
 .appMain{
-  background-color: lime;
-
 }
+.appMain [class*="__title"]{
+  margin:0;
+  font-size: 1.6rem;
+}
+.appMain [class*="__enTitle"]{
+  display: block;
+  margin-top:5px;
+}
+.sprite{
+  min-height:60px;
+  padding-left:65px;
+  background-image: url(./images/sprite_main.png);
+  background-repeat: no-repeat;
+}
+.spriteBook{
+  background-position: 0 0;
+}
+.spriteNews{
+  background-position: 0 -230px;
+}
+.spriteBoard{
+  background-position: 0 -115px;
+}
+.spriteFavorite{
+  background-position: 0 -345px;
+}
+.spriteTwitter{
+  background-position: 0 -460px;
+}
+
+.themeGreen {
+  color: #abd375;
+}
+.themeYellow {
+  color: #e8ca58;
+}
+.themeBrown {
+  color: #c7b39a;
+}
+.themeSkyblue {
+  color: #6aaee6;
+}
+.themeOrange {
+  color: #eea60a;
+}
+
+.appMain [class*="__summary"] {
+  line-height: 1.5;
+}
+/* 공통 추천 서적 */
+.book__cover {
+  margin: 15px 20px;
+  text-align: center;
+}
+.book__cover figcaption {
+  margin: 10px 0;
+}
+.book__info {
+  margin: 15px 0;
+  text-align: center;
+}
+.book__info * {
+  display: inline-block;
+}
+.book__info dt {
+}
+.book__info dd {
+  margin-left: 0;
+}
+.book__info dd[aria-label] {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+
+
+/* 공통 푸터 */
+
+
+
+/* .appMain h2::before{
+  position: absolute;
+  margin-right:30px;
+  top:50%;
+  left:0;
+  content: "";
+  width:58px;
+  height:59px;
+  display: inline-block;
+  background-image: url(./images/sprite_main.png);
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+}
+.book span {color:#abd375}
+.news span {color:#e8ca58}
+.board span {color:brown}
+.favorite span {color:orange}
+.twitter span {color:blue}
+
+.appMain span{
+  display: block;
+  font-size: 1.5rem;
+}
+.appMain h2{
+  padding-left:65px;
+  display: inline-block;
+}
+.news h2::before{
+  background-position:0 -230px;
+}
+.board h2::before{
+  background-position:0 -115px;
+}
+.favorite h2::before{
+  background-position:0 -345px;
+}
+.twitter h2::before{
+  background-position:0 -460px;
+  } */
+
 .appFooter{
   width:100%;
   background-color: orange;
