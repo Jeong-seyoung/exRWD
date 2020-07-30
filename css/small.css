@@ -109,7 +109,42 @@ input[type="search"]{
   width:70vw;/* 뷰포트 가로너비 70% */
   height:100vh;
   transform: translateX(-105%);/* 원래상태로 돌리려면 값을 0 */
+  z-index: 999;
+  color:#fff;
+  background:rgba(57, 48, 46, 0.66);
+  backdrop-filter: blur(3px);
+  padding:20px;
+}
+/* .menu__item{
+  display: flex;
+  flex-flow: row nowrap;
+} */
 
+.menu__link{
+  font-size:1.7rem;
+  font-weight: 700;
+  margin-bottom:20px;/* 마진 중복생겨서 수치를 더 키웠음 flex도 적용안됨*/
+  display: inline-block;
+  width:calc(100% - 1.5em);
+}
+.menu__subMenu{
+  width:100%;
+  font-size:1.6rem;
+  display: none;
+}
+.menu_subMenu li{
+  margin:10px 0;
+}
+.menu__subMenu a{
+  display: block;
+  padding:5px 0;
+}
+.menuAct .menu__subMenu{
+  display: block;
+}
+
+.isAct .menu__list{
+  transform:none;
 }
 /* 모바일 메인 콘텐츠 */
 .appMain{
