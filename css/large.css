@@ -133,10 +133,10 @@ input[type="search"]{
 /* 데스크탑 추천 서적 */
 .book{grid-area:1/1/2/span 4;
 }
-.book__cover {
+.book__cover,.news [class*="__videoContainer"] {
   margin-left: 40px;
-  margin-right: 40px;}
-  
+  margin-right: 40px;
+}
 /* 데스크탑 새소식 */
 .news{grid-area: 1/5/2/span 8;
 }
