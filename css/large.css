@@ -77,10 +77,9 @@ input[type="search"]{
 .appHeader,.appMain,.menu__list{
   /*   max-width: 1800px;
      min-width: 1000px; */
-     width: 1000/1200;
-    width: 78.125%;
-    min-width: 1000px;
-    max-width: 1800px;
+     min-width: 1000px;
+     max-width:1800px;
+     width:78.125%;
   }
   
 /* 데스크탑 내비게이션 */
@@ -147,6 +146,12 @@ input[type="search"]{
 /* 데스크탑 인기사이트 */
 .favorite{
   grid-area:2/10/3/span 3;
+}
+/* li에 하지 않은 이유-tab키를 눌렀을 때 focus가 되지 않아서
+focus되게 해주려면 tab-index="0" attr넣어줘야함 */
+.favorite__list a:hover::before,
+.favorite__list a:focus::before{
+  right:-10px;
 }
 /* 데스크탑 트위터 */
 .twitter{

@@ -417,6 +417,7 @@ video.responsive {
 /* 공통 게시판 */
 .board{
   position: relative;
+  overflow: hidden;/* grid에서 white-space:nowrap로 인한 너비 증가 이슈로 overflow:hidden해주었다. */
 }
 .board__list{
   margin:15px 0;
@@ -431,7 +432,7 @@ video.responsive {
 
 .board__list a{
   white-space: nowrap;
-  width:calc(100% - 80px);
+  /* width:calc(100% - 80px); */
   overflow: hidden;
   text-overflow: ellipsis;
   flex-grow: 1;
@@ -444,6 +445,86 @@ video.responsive {
   right:-10px;
   padding:10px;
 }
+/*공통 인기사이트 */
+.favorite__list{
+  margin:15px 0;
+  padding-left:20px;
+}
+.favorite__list li{
+  counter-increment: number;
+  margin:10px 0;
+  display: flex;
+  flex-flow:row nowrap;
+}
+.favorite__list li::before{
+  content:counter(number);/* decimal:10진수 같이 안쓰고 number(변수)만 쓰면 아라비아 숫자로 표현 */
+  color:#fff;
+  background-color: #eea60a;/* Themeorange컬러 컬러 지정이 번거로우면 따로 변수 지정해서 컬러 관리할 수 있다.*/
+  padding:2px 6px;
+  margin-right:5px;
+  border-radius: 50%;
+  /* display: inline-block; */
+
+}
+.favorite__list a{
+  position: relative;
+  flex-grow: 1;
+}
+/* li에 하지 않은 이유-tab키를 눌렀을 때 focus가 되지 않아서
+focus되게 해주려면 tab-index="0" attr넣어줘야함 */
+.favorite__list a:hover::before,
+.favorite__list a:focus::before{
+  content:attr(data-tooltip);
+  position: absolute;
+  top:1em;
+  z-index: 100;
+  color:#fff;
+  border:1px solid #aaa;
+  background-color: #eea60a;
+  box-shadow: 2px 2px 0 0 #000;
+  border:1px solid #000;
+  padding:5px 
+}
+/* 공통푸터 */
+
+/* .favorite__list li{
+  margin:10px 0 ;
+  counter-increment: number;
+  position: relative;
+  padding:5px 0;
+}
+.favorite__list li::before{
+  content:counter(number);
+  margin-left:5px;
+  color:#fff;
+  font-weight: 700;
+  text-align: center;
+  display: inline-block;
+  border-radius: 20px;
+  width:30px;
+  height:30px;
+  line-height: 30px;
+  vertical-align: middle;
+  background-color:orange;
+}
+.favorite__list li:hover ::after{
+  content:attr(data-tooltip);
+  position: absolute;
+  display: inline-block;
+  z-index: 100;
+  width:200px;
+  background-color:orange;
+  top:70%;
+  left:0;
+  margin-left:100px;
+  color:#fff;
+  padding:10px 20px;
+  box-shadow: 5px 5px 0 0 #000;
+}
+.favorite__list a{
+  padding-left:10px;
+} */
+
 /* 공통 푸터 */
 
 
