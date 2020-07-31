@@ -195,4 +195,5 @@ focus되게 해주려면 tab-index="0" attr넣어줘야함 */
 
 /* 데스크탑 푸터 */
 .appFooter{
+  text-align: center;
 }
